@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Research</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="research-page">
+  <div class="page-container">
+    <div class="menu">
+      <a href="resume.html" class="clear-a menu-item-outer">
+        <img src="assets/img/resume.svg" alt="Résumé" class="menu-item" />
+      </a>
+      <a href="research.html" class="clear-a menu-item-outer active">
+        <img src="assets/img/research-active.svg" alt="Research" class="menu-item" />
+      </a>
+      <a href="teaching.html" class="clear-a menu-item-outer">
+        <img src="assets/img/teaching.svg" alt="Teaching" class="menu-item" />
+      </a>
+      <a href="https://www.flickr.com/photos/siyifeng/albums" class="clear-a menu-item-outer">
+        <img src="assets/img/gallery.svg" alt="Gallery" class="menu-item" />
+      </a>
+      <a href="contact.html" class="clear-a menu-item-outer">
+        <img src="assets/img/contact.svg" alt="Contact" class="menu-item" />
+      </a>
+    </div>
+    <div class="arrow-outer">
+      <img src="assets/img/arrow.png" alt="" class="arrow" />
+    </div>
+    <div class="entries-section">
+      <div class="entry-grid">
+        <a href="interests.html" title="Interests" class="clear-a entry-interests">
+          <img src="assets/img/research2011on.png" alt="Interests" class="entry-image" />
+        </a>
+      </div>
+      <div class="entry-grid">
+        <a href="projects.html" title="Projects" class="clear-a entry-projects">
+          <img src="assets/img/research2015on.png" alt="Projects" class="entry-image" />
+        </a>
+      </div>
+      <div class="entry-grid">
+        <a href="teaching.html" title="Teaching" class="clear-a entry-teaching">
+          <img src="assets/img/matter-cycle.png" alt="Teaching" class="entry-image" />
+        </a>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="rights-outer">
+        <img src="assets/img/rights.svg" alt="All rights reserved" class="rights" />
+      </div>
+      <div class="copyright-outer">
+        <img src="assets/img/copyright.svg" alt="" class="copyright" />
+      </div>
+      <a href="index.html" class="clear-a seal-outer">
+        <img src="assets/img/seal.png" alt="" class="seal" />
+      </a>
+    </div>
+  </div>
+  <script>
+    function transformEntryElement(element, e) {
+      var rect = element.getBoundingClientRect();
+      var x = (rect.left + rect.right) / 2;
+      var y = (rect.top + rect.bottom) / 2;
+      var deltaX = e.pageX - x;
+      var deltaY = e.pageY - y;
+      var distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
+      var diag = Math.sqrt(Math.pow(rect.width, 2) + Math.pow(rect.height, 2));
+      var maxDistance = diag / 2 * 1.6;
+      if (distance <= maxDistance) {
+        element.style.transformOrigin = ((deltaX / rect.width * 1.6 + 0.5) * 100).toString() + '%' + ' ' + ((deltaY / rect.height * 1.6 + 0.5) * 100).toString() + '%';
+        element.style.transform = 'scale(' + (1 + (maxDistance - distance) / maxDistance * 0.6).toString() + ')';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      window.addEventListener('mousemove', function(e) {
+        transformEntryElement(document.getElementsByClassName('entry-interests')[0], e);
+        transformEntryElement(document.getElementsByClassName('entry-projects')[0], e);
+        transformEntryElement(document.getElementsByClassName('entry-teaching')[0], e);
+      });
+    });
+  </script>
+</body>
+</html>
