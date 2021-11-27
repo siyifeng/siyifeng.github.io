@@ -600,12 +600,22 @@ a.clear-a {
 }
 
 .interests-page .publication-row {
+  width: 600px;
   margin-top: 24px;
   margin-left: 237px;
   line-height: 23px;
   color: #fff;
   font-size: 20px;
   white-space: pre-wrap;
+}
+
+.interests-page .publication-row-strong {
+  color: #f3f51a;
+  font-weight: 700;
+}
+
+.interests-page .publication-row-link {
+  color: #86c0f4;
 }
 
 .interests-page .title-talks-outer {
