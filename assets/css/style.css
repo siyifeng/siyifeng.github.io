@@ -1284,15 +1284,33 @@ a.clear-a {
 
 .teaching-page .textbooks-subgroup-title-row-bullet {
   margin-right: 10px;
+  color: #b4d786;
 }
 
-.teaching-page .textbook-item-row {
+.teaching-page .textbooks-subgroup-title-row-text {
+  color: #b4d786;
+}
+
+.teaching-page .textbook-item {
+  margin-bottom: 10px;
   margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.teaching-page .textbook-item-bullet, .teaching-page .textbook-item-text-row {
   line-height: 23px;
   color: #fff;
   font-size: 20px;
   white-space: pre-wrap;
-  display: flex;
+}
+
+.teaching-page .textbook-item-publish-row {
+  line-height: 19px;
+  color: #fff;
+  font-size: 16px;
+  font-style: italic;
+  white-space: pre-wrap;
 }
 
 .teaching-page .foot {
