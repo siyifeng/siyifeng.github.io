@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "ComicRelief";
+    src: url("../fonts/ComicRelief-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ComicRelief";
+    src: url("../fonts/ComicRelief-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 html {
   cursor: url("../img/cursor.png") 42 25, auto;
 }
@@ -792,7 +806,21 @@ a.clear-a {
 
 .projects-page .projects-row-1-item {
   display: inline-block;
-  height: 30px;
+}
+
+.projects-page .projects-row-1-item-1 {
+  display: inline-block;
+  height: 120px;
+}
+
+.projects-page .projects-row-1-item-2 {
+  display: inline-block;
+  height: 100px;
+}
+
+.projects-page .projects-row-1-item-3 {
+  display: inline-block;
+  height: 40px;
 }
 
 .projects-page .projects-row-1-item-image {
@@ -806,6 +834,123 @@ a.clear-a {
 
 .projects-page .projects-row-2-item-image {
   height: 100%;
+}
+
+.projects-page .team-title-row {
+  width: 752px;
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-page .team-title-outer {
+  height: 45px;
+}
+
+.projects-page .team-title {
+  height: 100%;
+}
+
+.projects-page .pi-section {
+  display: flex;
+  justify-content: center;
+  width: 752px;
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-page .pi-item {
+  display: inline-block;
+}
+
+.projects-page .pi-image-outer {
+  height: 200px;
+}
+
+.projects-page .pi-image {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.projects-page .pi-text {
+  margin-top: 12px;
+  line-height: 1em;
+  color: #fff;
+  font-family: "ComicRelief";
+  font-size: 18px;
+}
+
+.projects-page .member-section {
+  display: flex;
+  width: 752px;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-page .member-item {
+  flex: 1;
+  text-align: center;
+}
+
+.projects-page .member-image-outer {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.projects-page .member-image {
+  width: 80%;
+  max-width: 160px;
+  border-radius: 9999px;
+}
+
+.projects-page .member-text-row {
+  line-height: 18px;
+  color: #fff;
+  font-family: "ComicRelief";
+  font-size: 16px;
+}
+
+.projects-page .alumni-title-row {
+  width: 752px;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1em;
+  color: #fff;
+  font-size: 24px;
+}
+
+.projects-page .alumni-section {
+  display: flex;
+  width: 752px;
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-page .alumni-item {
+  flex: 1;
+  text-align: center;
+}
+
+.projects-page .alumni-image-outer {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.projects-page .alumni-image {
+  width: 80%;
+  max-width: 120px;
+  border-radius: 9999px;
+}
+
+.projects-page .alumni-text-row {
+  line-height: 18px;
+  color: #fff;
+  font-family: "ComicRelief";
+  font-size: 16px;
 }
 
 .projects-page .foot {
@@ -895,10 +1040,11 @@ a.clear-a {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .miao-page .project-name-outer {
-  height: 24px;
+  height: 160px;
 }
 
 .miao-page .project-name {
@@ -1001,10 +1147,11 @@ a.clear-a {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .ice-page .project-name-outer {
-  height: 24px;
+  height: 160px;
 }
 
 .ice-page .project-name {
@@ -1238,7 +1385,7 @@ a.clear-a {
   white-space: pre-wrap;
 }
 
-.teaching-page .lectures-section-title-outer, .teaching-page .textbooks-section-title-outer {
+.teaching-page .lectures-section-title-outer, .teaching-page .astrochem-school-section-title-outer, .teaching-page .textbooks-section-title-outer {
   height: 45px;
   margin-bottom: 8px;
   margin-left: 232px;
@@ -1263,6 +1410,42 @@ a.clear-a {
 
 .teaching-page .lecture-row-bullet {
   margin-right: 10px;
+}
+
+.teaching-page .astrochem-school-section-title-outer {
+  margin-top: 54px;
+}
+
+.teaching-page .astrochem-school-title {
+  height: 100%;
+}
+
+.teaching-page .astrochem-school-row {
+  margin-left: 244px;
+  color: #fff;
+  font-size: 20px;
+  white-space: pre-wrap;
+  display: flex;
+  align-items: center;
+}
+
+.teaching-page .astrochem-school-row-bullet {
+  margin-right: 10px;
+}
+
+.teaching-page .astrochem-school-row-text {
+  color: #fff;
+}
+
+.teaching-page .astrochem-school-logo-outer {
+  margin-left: 12px;
+  display: inline;
+  line-height: 0;
+  font-size: 0;
+}
+
+.teaching-page .astrochem-school-logo {
+  height: 48px;
 }
 
 .teaching-page .textbooks-section-title-outer {

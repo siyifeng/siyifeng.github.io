@@ -53,17 +53,17 @@
         </div>
       </div>
       <div class="projects-row-cell">
-        <a href="miao.html" class="clear-a projects-row-1-item">
-          <img src="assets/img/miao.svg" alt="MIAO" class="projects-row-1-item-image" />
+        <a href="miao.html" class="clear-a projects-row-1-item projects-row-1-item-1">
+          <img src="assets/img/miao.png" alt="MIAO" class="projects-row-1-item-image" />
         </a>
       </div>
       <div class="projects-row-cell">
-        <a href="ice.html" class="clear-a projects-row-1-item">
-          <img src="assets/img/ice.svg" alt="ICE" class="projects-row-1-item-image" />
+        <a href="ice.html" class="clear-a projects-row-1-item projects-row-1-item-2">
+          <img src="assets/img/ice.png" alt="ICE" class="projects-row-1-item-image" />
         </a>
       </div>
       <div class="projects-row-cell">
-        <a href="time.html" class="clear-a projects-row-1-item">
+        <a href="time.html" class="clear-a projects-row-1-item projects-row-1-item-3">
           <img src="assets/img/time.svg" alt="TIME" class="projects-row-1-item-image" />
         </a>
       </div>
@@ -91,6 +91,66 @@
         </a>
       </div>
     </div>
+    <div class="team-title-row">
+      <div class="team-title-outer">
+        <img src="assets/img/team.svg" alt="Team" class="team-title" />
+      </div>
+    </div>
+    <div class="pi-section">
+      <a href="resume.html" class="pi-item clear-a">
+        <div class="pi-image-outer">
+          <img src="assets/img/fsy.jpg" alt="Siyi Feng" class="pi-image" />
+        </div>
+        <div class="pi-text">PI:&nbsp;Siyi&nbsp;Feng&nbsp;（冯思轶）</div>
+      </a>
+    </div>
+    <div class="member-section">
+      <a href="" class="member-item clear-a">
+        <div class="member-image-outer">
+          <img src="assets/img/linst.jpg" alt="Shuting Lin" class="member-image" />
+        </div>
+        <div class="member-text-row">Shuting&nbsp;Lin</div>
+        <div class="member-text-row">（林淑婷）</div>
+      </a>
+      <a href="" class="member-item clear-a">
+        <div class="member-image-outer">
+          <img src="assets/img/miaod.jpg" alt="Dan Miao" class="member-image" />
+        </div>
+        <div class="member-text-row">Dan&nbsp;Miao</div>
+        <div class="member-text-row">（苗丹）</div>
+      </a>
+      <a href="" class="member-item clear-a">
+        <div class="member-image-outer">
+          <img src="assets/img/yangqc.jpg" alt="Qiancheng Yang" class="member-image" />
+        </div>
+        <div class="member-text-row">Qiancheng&nbsp;Yang</div>
+        <div class="member-text-row">（杨前程）</div>
+      </a>
+      <a href="" class="member-item clear-a">
+        <div class="member-image-outer">
+          <img src="assets/img/xiejy.jpg" alt="Jinye Xie" class="member-image" />
+        </div>
+        <div class="member-text-row">Jinye&nbsp;Xie</div>
+        <div class="member-text-row">（谢晋烨）</div>
+      </a>
+      <a href="" class="member-item clear-a">
+        <div class="member-image-outer">
+          <img src="assets/img/gaolh.jpg" alt="Lehan Gao" class="member-image" />
+        </div>
+        <div class="member-text-row">Lehan&nbsp;Gao</div>
+        <div class="member-text-row">（高乐涵）</div>
+      </a>
+    </div>
+    <div class="alumni-title-row">Alumni</div>
+    <div class="alumni-section">
+      <div class="alumni-item">
+        <div class="alumni-image-outer">
+          <img src="assets/img/shikp.jpg" alt="Kunpeng Shi" class="alumni-image" />
+        </div>
+        <div class="alumni-text-row">Kunpeng&nbsp;Shi</div>
+        <div class="alumni-text-row">（师昆鹏）</div>
+      </div>
+    </div>
     <div class="foot">
       <div class="rights-outer">
         <img src="assets/img/rights.svg" alt="All rights reserved" class="rights" />
@@ -103,5 +163,30 @@
       </a>
     </div>
   </div>
+  <script>
+    function transformEntryElement(element, e) {
+      var rect = element.getBoundingClientRect();
+      var x = (rect.left + rect.right) / 2;
+      var y = (rect.top + rect.bottom) / 2;
+      var deltaX = e.pageX - x;
+      var deltaY = e.pageY - y;
+      var distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
+      var diag = Math.sqrt(Math.pow(rect.width, 2) + Math.pow(rect.height, 2));
+      var maxDistance = diag / 2 * 1.6;
+      if (distance <= maxDistance) {
+        element.style.transformOrigin = ((deltaX / rect.width * 1.6 + 0.5) * 100).toString() + '%' + ' ' + ((deltaY / rect.height * 1.6 + 0.5) * 100).toString() + '%';
+        element.style.transform = 'scale(' + (1 + (maxDistance - distance) / maxDistance * 0.6).toString() + ')';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      window.addEventListener('mousemove', function(e) {
+        var elements = document.getElementsByClassName('member-image');
+        for (var i = 0; i < elements.length; i++) {
+          transformEntryElement(elements[i], e);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
