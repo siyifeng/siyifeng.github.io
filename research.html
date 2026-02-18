@@ -67,8 +67,8 @@
       var rect = element.getBoundingClientRect();
       var x = (rect.left + rect.right) / 2;
       var y = (rect.top + rect.bottom) / 2;
-      var deltaX = e.pageX - x;
-      var deltaY = e.pageY - y;
+      var deltaX = e.pageX - (x + window.scrollX);
+      var deltaY = e.pageY - (y + window.scrollY);
       var distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
       var diag = Math.sqrt(Math.pow(rect.width, 2) + Math.pow(rect.height, 2));
       var maxDistance = diag / 2 * 1.6;
